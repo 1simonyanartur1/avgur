@@ -1,32 +1,60 @@
 .free-delivery
 	width: 100%
 	padding: 30px 0
+	@include mq($max-width: 1200px)
+		padding: 15px 0
 	.row
 		display: flex
 		align-items: center
 		justify-content: space-between
 		flex-wrap: wrap
 		padding: 30px 0
+		@include mq($max-width: 1200px)
+			padding: 15px 0
+			align-items: flex-start
 		&:last-child
 			.left
 				padding-right: 0
 				padding-left: 50px
+				@include mq($max-width: 1200px)
+					padding-left: 20px
+				@include mq($max-width: 700px)
+					padding-left: 0
 	.left
 		width: 60%
 		padding-right: 50px
+		@include mq($max-width: 1200px)
+			padding-right: 20px
+			width: 70%
+		@include mq($max-width: 700px)
+			width: 100%
 	&__img
 		display: block
 		width: 40%
 		box-shadow: -12px 12px 56px 6px rgba(0, 0, 0, 0.09)
+		@include mq($max-width: 1200px)
+			width: 30%
+		@include mq($max-width: 700px)
+			display: none
 	.title
 		font-family: 'Montserrat', sans-serif
 		color: $dark
 		margin-bottom: 20px
 		font-size: 25px
 		font-weight: 900
+		@include mq($max-width: 1200px)
+			font-size: 20px
+		@include mq($max-width: 575px)
+			font-size: 18px
 		span
 			display: block
 			text-transform: uppercase
 			width: 100%
 			font-size: 25px
 			color: $orange
+			@include mq($max-width: 575px)
+				font-size: 18px
+	.action
+		max-width: 270px
+		@include mq($max-width: 1000px)
+			max-width: 200px

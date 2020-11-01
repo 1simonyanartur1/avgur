@@ -26,26 +26,36 @@
 			&.left
 				left: 46%
 				transform: translate(0, 0)
+				@include mq($max-width: 900px)
+					left: 40%
 				&:before
 					transform: rotate(90deg)
 			&.right
 				right: 46%
 				transform: translate(0, 0)
+				@include mq($max-width: 900px)
+					right: 40%
 				&:before
 					transform: rotate(-90deg)
 	.slide
 		background: $white
 		padding: 10px
 		margin: 0 10px
-		height: 230px
+		min-height: 230px
 		display: flex
 		flex-direction: column
 		align-items: center
+		@include mq($max-width: 575px)
+			padding: 5px
+			margin: 5px
+			min-height: 180px
 		&__img
 			display: block
 			max-width: 100%
 			height: 120px
 			margin-bottom: 15px
+			@include mq($max-width: 575px)
+				height: 100px
 		&__title
 			text-align: center
 			text-transform: uppercase
@@ -54,3 +64,5 @@
 			display: block
 			width: 100%
 			color: $dark
+			@include mq($max-width: 575px)
+				font-size: 14px

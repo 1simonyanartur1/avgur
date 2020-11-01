@@ -8,6 +8,15 @@
 	color: $white
 	font-size: 16px
 	font-weight: 500
+	@include mq($max-width: 1200px)
+		&::after
+			content: '\e760'
+			font-family: 'fontello'
+			display: inline-block
+			font-size: 16px
+			color: $white
+			margin-left: 10px
+			transform: rotate(-90deg)
 	&:hover
 		color: $dark
 	&:before
@@ -61,5 +70,7 @@
 					color: $white
 					width: 100%
 					margin-bottom: 5px
+					&:hover
+						color: $dark
 
 

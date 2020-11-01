@@ -5,23 +5,12 @@
 	max-width: 570px
 	margin: 50px auto 0
 	position: relative
+	@include mq($max-width: 575px)
+		padding: 25px
 	&__title
 		font-family: 'Montserrat', sans-serif
 		font-size: 35px
 		margin-bottom: 25px
 		text-align: center
-	// .form
-	// 	&-item
-	// 		width: 100%
-	// 		margin-bottom: 10px
-	// 	&__input
-	// 		width: 100%
-	// 		min-width: 100%
-	// 		border: 1px solid $gray1
-	// 		height: 45px
-	// 		border-radius: 25px
-	// 		color: $dark
-	// 		padding: 0 20px
-	// 		&::placeholder
-	// 			color: $dark
-	// 	&__btn
+		@include mq($max-width: 575px)
+			font-size: 20px

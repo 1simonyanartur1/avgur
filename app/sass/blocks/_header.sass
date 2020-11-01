@@ -2,30 +2,57 @@
 	width: 100%
 	margin-bottom: 30px
 	background: $white
+	@include mq($max-width: 1500px)
+		margin-bottom: 15px
 	.top
 		width: 100%
 		padding: 12px 0
+		@include mq($max-width: 1500px)
+			padding: 6px 0
 		.container
 			display: flex
+			flex-wrap: wrap
 			align-items: flex-start
 			justify-content: space-between
+			@include mq($max-width: 1000px)
+				align-items: center
 	.logo
 		padding: 22px 32px
 		border: 1px solid $orange
 		border-radius: 50px
+		@include mq($max-width: 1500px)
+			padding: 16px 24px
+		@include mq($max-width: 1000px)
+			border: none
+			padding: 0
 		&__img
 			display: block
 			width: 205px
 			height: auto
 			@include trs
+			@include mq($max-width: 1500px)
+				width: 150px
+			@include mq($max-width: 700px)
+				width: 110px
 			&:hover
 				opacity: .5
 				transform: scale(.9)
 	.block
-		max-width: 520px
+		max-width: 550px
+		@include mq($max-width: 1000px)
+			max-width: 400px
+		@include mq($max-width: 575px)
+			max-width: inherit
+			width: 100%
+			margin-top: 10px
 		&__text
 			margin-bottom: 10px
 			line-height: 1.1
+			@include mq($max-width: 1500px)
+				margin-bottom: 5px
+				font-size: 12px
+			@include mq($max-width: 1000px)
+				font-size: 10px
 		&-line
 			width: 100%
 			display: flex
@@ -33,21 +60,33 @@
 			justify-content: space-between
 	.search
 		position: relative
+		@include mq($max-width: 575px)
+			width: 49%
 		&__input
 			width: 370px
 			height: 45px
 			border-radius: 35px
 			border: 1px solid $orange
-			padding: 17px 50px 17px 35px
-			font-weight: 900
+			padding: 0 50px 0 35px
+			font-weight: 700
 			font-size: 16px
 			text-transform: uppercase
 			color: $dark
 			@include trs
+			@include mq($max-width: 1500px)
+				height: 35px
+				font-size: 14px
+			@include mq($max-width: 1000px)
+				width: 240px
+				font-size: 11px
+				padding-left: 20px
+			@include mq($max-width: 575px)
+				width: 100%
+				height: 30px
 			&::placeholder
 				color: $dark
 				text-transform: uppercase
-				font-weight: 900
+				font-weight: 700
 			&:hover,
 			&:focus
 				border: 1px solid $dark
@@ -66,6 +105,14 @@
 			background: $orange
 			@include trs
 			cursor: pointer
+			@include mq($max-width: 1500px)
+				height: 35px
+				width: 35px
+				font-size: 16px
+			@include mq($max-width: 575px)
+				width: 30px
+				height: 30px
+				font-size: 14px
 			&:hover
 				background: $dark
 	.basket-link
@@ -73,6 +120,11 @@
 		align-items: center
 		color: $dark
 		margin: 0 auto 0 30px
+		@include mq($max-width: 1000px)
+			margin: 0 auto 0 10px
+		@include mq($max-width: 575px)
+			margin-left: 2%
+			width: 49%
 		&:hover
 			.basket-link__icon
 				background: $dark
@@ -88,24 +140,75 @@
 			align-items: center
 			justify-content: center
 			border-radius: 100%
+			@include mq($max-width: 1500px)
+				width: 35px
+				height: 35px
+			@include mq($max-width: 575px)
+				width: 30px
+				height: 30px
 		&__num
 			margin-left: 10px
+			font-weight: 500
 			&:after
 				content: '\f158'
 				font-family: fontello
 				font-size: 13px
 				margin-left: 5px
 	.links
+		@include mq($max-width: 700px)
+			display: flex
+			flex-wrap: wrap
+			margin-top: 10px
+			width: 100%
 		li
 			&:not(:last-child)
 				margin-bottom: 10px
+				@include mq($max-width: 1500px)
+					margin-bottom: 5px
+				@include mq($max-width: 700px)
+					margin-bottom: 0
+					margin-right: 2%
+			@include mq($max-width: 700px)
+				width: 49%
+	.show-catalog
+		color: $white
+		font-weight: 500
+		font-size: 16px
+		align-items: center
+		display: none
+		@include mq($max-width: 1200px)
+			display: flex
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 10px
+			width: 20px
+			height: 20px
+			background: url($img+'dots.svg') no-repeat center center / cover
 	.menu-wrap
 		width: 100%
 		background: $orange2
+		position: relative
+		@include mq($max-width: 1200px)
+			padding: 5px 0
+		.container
+			@include mq($max-width: 1200px)
+				display: flex
+				align-items: center
+				justify-content: space-between
 	.menu
 		width: 100%
 		display: flex
 		align-items: center
+		@include mq($max-width: 1200px)
+			display: none
+			flex-direction: column
+			background: $orange2
+			position: absolute
+			width: 100%
+			left: 0
+			top: 100%
+			z-index: 10
 		li
 			flex: 1
 			&:last-child
@@ -121,6 +224,9 @@
 			color: $white
 			font-size: 16px
 			font-weight: 500
+			@include mq($max-width: 1500px)
+				padding: 10px 0
+				font-size: 14px
 			&:before
 				content: ''
 				display: block
@@ -135,3 +241,47 @@
 			&:hover
 				color: $orange2
 				background: $white
+
+
+.burger
+	width: 30px
+	height: 30px
+	position: relative
+	cursor: pointer
+	background: transparent
+	border: none
+	background: none
+	padding: 0
+	outline: none
+	display: none
+	@include mq($max-width: 1200px)
+		display: block
+		margin-left: auto
+	.bar
+		padding: 0
+		width: 100%
+		height: 2px
+		display: block
+		background: #fff
+		transition: all 0.3s ease-in-out
+		position: absolute
+		left: 50%
+	.bar1
+		transform: translate(-50%, -50%) rotate(0)
+		top: 20%
+	.bar2
+		top: 50%
+		width: 60%
+		transform: translate(-50%, -50%) rotate(0)
+	.bar3
+		top: 80%
+		transform: translate(-50%, -50%) rotate(0)
+	&.active
+		.bar1
+			top: 50%
+			transform: translate(-50%, -50%) rotate(45deg)
+		.bar2
+			background-color: transparent
+		.bar3
+			top: 50%
+			transform: translate(-50%, -50%) rotate(-45deg)

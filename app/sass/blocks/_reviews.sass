@@ -2,22 +2,33 @@
 	margin-bottom: 60px
 	.item
 		display: flex
+		flex-wrap: wrap
 		background: $white
 		box-shadow: -11.594px 12.433px 56.42px 5.58px rgba(0, 0, 0, 0.09)
 		padding: 25px
 		margin-bottom: 20px
 		&-left
 			width: 20%
+			@include mq($max-width: 575px)
+				width: 100%
 		&-right
 			width: 80%
 			padding-left: 30px
 			border-left: 1px solid $gray1
+			@include mq($max-width: 575px)
+				width: 100%
+				padding-left: 0
+				border: none
 		&__name
 			text-transform: uppercase
 			font-weight: 700
 			font-size: 16px
 			margin-bottom: 20px
+			@include mq($max-width: 575px)
+				margin-bottom: 10px
 		&__date
+			@include mq($max-width: 575px)
+				margin-bottom: 15px
 		&__text
 			font-size: 16px
 			line-height: 1.6

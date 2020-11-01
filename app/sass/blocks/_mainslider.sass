@@ -35,11 +35,15 @@
 		&.left
 			left: 40%
 			transform: translate(0, 0)
+			@include mq($max-width: 575px)
+				left: 20%
 			&:before
 				transform: rotate(90deg)
 		&.right
 			right: 40%
 			transform: translate(0, 0)
+			@include mq($max-width: 575px)
+				right: 20%
 			&:before
 				transform: rotate(-90deg)
-	
+

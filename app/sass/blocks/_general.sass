@@ -11,13 +11,22 @@ body
 	width: 100%
 	display: flex
 	flex-wrap: wrap
+	position: relative
 	&.index-page,
 	&.reviews-page
 		background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right, url($img+'bg3.jpg') no-repeat bottom left, url($img+'bg4.jpg') no-repeat bottom right
+		@include mq($max-width: 1700px)
+			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right
+		@include mq($max-width: 1200px)
+			background: none
 	&.product-page,
 	&.content-page,
 	&.contact-page
 		background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right
+		@include mq($max-width: 1200px)
+			background: none
+	@include mq($max-width: 1200px)
+		padding: 0
 
 body,
 .change-scroll
@@ -37,15 +46,27 @@ body,
 	background: $main-bg
 	width: 915px
 	padding: 30px
+	@include mq($max-width: 1200px)
+		width: 100%
+		padding: 0 15px
+	@include mq($max-width: 575px)
+		padding: 0 10px
 	&.type2
 		padding-top: 0
 		padding-right: 0
-		
+		@include mq($max-width: 1200px)
+			padding: 0 15px
+		@include mq($max-width: 575px)
+			padding: 0 10px
 
 .container
 	width: 1200px
 	margin: 0 auto
-
+	@include mq($max-width: 1200px)
+		width: 100%
+		padding: 0 15px
+	@include mq($max-width: 575px)
+		padding: 0 10px
 
 .btn-black
 	width: 270px
@@ -59,6 +80,15 @@ body,
 	border-radius: 35px
 	@include trs
 	cursor: pointer
+	@include mq($max-width: 1500px)
+		height: 35px
+	@include mq($max-width: 1000px)
+		width: auto
+		padding: 0 25px
+	@include mq($max-width: 575px)
+		font-size: 13px
+		padding: 0 15px
+		height: 30px
 	&:before
 		display: inline-block
 		margin-right: 10px
@@ -78,6 +108,15 @@ body,
 	justify-content: center
 	color: $white
 	background-image: linear-gradient( 59deg, rgb(182,24,24) 0%, rgb(203,90,8) 100%)
+	@include mq($max-width: 1500px)
+		height: 35px
+	@include mq($max-width: 1000px)
+		width: auto
+		padding: 0 25px
+	@include mq($max-width: 575px)
+		font-size: 13px
+		padding: 0 15px
+		height: 30px
 	&:before
 		display: inline-block
 		margin-right: 10px
@@ -96,6 +135,15 @@ body,
 	border: 1px solid $orange
 	cursor: pointer
 	@include trs
+	@include mq($max-width: 1500px)
+		height: 35px
+	@include mq($max-width: 1000px)
+		height: auto
+		padding: 0 25px
+	@include mq($max-width: 575px)
+		font-size: 13px
+		padding: 0 15px
+		height: 30px
 	&:before
 		display: inline-block
 		margin-right: 10px
@@ -103,13 +151,17 @@ body,
 		background: $orange
 		color: $white
 
-
 .page-title
 	font-family: 'Montserrat Alternates', sans-serif
 	font-weight: 900
 	font-size: 35px
 	text-align: center
 	margin-bottom: 30px
+	@include mq($max-width: 1000px)
+		font-size: 26px
+		margin-bottom: 15px
+	@include mq($max-width: 575px)
+		font-size: 20px
 
 .form
 	width: 100%
@@ -119,6 +171,9 @@ body,
 	&-action
 		width: 90%
 		margin: 30px auto 0 auto
+		@include mq($max-width: 575px)
+			margin-top: 10px
+			width: 100%
 	&__input
 		min-width: 100%
 		max-width: 100%
@@ -131,18 +186,25 @@ body,
 		font-size: 16px
 		color: $dark
 		@include trs
+		@include mq($max-width: 575px)
+			height: auto
+			font-size: 12px
+			padding: 10px 15px
 		&::placeholder
 			font-size: 16px
 			color: $dark
+			@include mq($max-width: 575px)
+				font-size: 12px
 		&:hover,
 		&:focus
 			border: 1px solid $dark
 			padding-left: 20px
+			@include mq($max-width: 575px)
+				padding-left: 15px
 	textarea
 		min-height: 75px
 	&__btn
 		width: 100%
-
 
 .pagination
 	padding: 30px 0
@@ -162,6 +224,9 @@ body,
 		display: flex
 		align-items: center
 		justify-content: center
+		@include mq($max-width: 575px)
+			width: 20px
+			height: 20px
 		&.active,
 		&:hover
 			color: $white
@@ -180,12 +245,18 @@ body,
 			&:before
 				font-size: 20px
 				color: $white
+				@include mq($max-width: 575px)
+					font-size: 16px
 		&.prev
 			margin-right: 10px
+			@include mq($max-width: 575px)
+				margin-right: 0
 			&:before
 				transform: rotate(90deg)
 		&.next
 			margin-left: 10px
+			@include mq($max-width: 575px)
+				margin-left: 0
 			&:before
 				transform: rotate(-90deg)
 

@@ -8,8 +8,10 @@ html
 		include blocks/header.pug
 		
 		sidebar.sidebar
-			include blocks/sidebar-filters.pug
-			include blocks/catalog-links.pug
+			.sidebar-inner
+				include blocks/sidebar-filters.pug
+				include blocks/catalog-links.pug
+			.sidebar-inner2
 
 		main.main
 			section.breadcrumbs

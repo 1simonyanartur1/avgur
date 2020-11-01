@@ -21,7 +21,7 @@ var path = {
 		css: './app/css/',
 		gulpfile: ['./app/js/*.js', './gulpfile.js'],
 		js: './app/js/',
-		jsLibs: ['./app/libs/jquery/dist/jquery.min.js', './app/libs/jquery-ui-1.12.1/jquery-ui.min.js', './app/libs/slick-carousel/slick/slick.min.js', './app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js', './app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js', './app/libs/jquery-nice-select-master/js/jquery.nice-select.min.js'],
+		jsLibs: ['./app/libs/jquery/dist/jquery.min.js', './app/libs/jquery-ui-1.12.1/jquery-ui.min.js', './app/libs/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js', './app/libs/slick-carousel/slick/slick.min.js', './app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js', './app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js', './app/libs/jquery-nice-select-master/js/jquery.nice-select.min.js'],
 		cssLibs: ['./app/libs/slick-carousel/slick/slick.css', './app/libs/jquery-ui-1.12.1/jquery-ui.css', './app/libs/Magnific-Popup-master/dist/magnific-popup.css', './app/libs/jquery-nice-select-master/css/nice-select.css'],
 		deleteLibs: ['./app/js/libs.js', './app/css/libs.css']
 	},

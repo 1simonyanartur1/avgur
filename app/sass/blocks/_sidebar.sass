@@ -1,7 +1,36 @@
 .sidebar
+	@include mq($max-width: 1200px)
+		position: absolute
+		width: 270px
+		left: -100vw
+		z-index: 5
+		top: 146px
+		min-height: 100vh
+		bottom: 0
+		background: rgba($main-bg, .5)
+		width: 100%
+		transition: all .5s ease
+		display: flex
+		&.show
+			left: 15px
+			@include mq($max-width: 575px)
+				left: 10px
+	&-inner
+		width: 270px
+		height: 100%
+		background: $main-bg
+	&-inner2
+		display: none
+		@include mq($max-width: 1200px)
+			display: block
+			flex: 1
 	&-links
+		@include mq($max-width: 1200px)
+			padding: 0 10px
 		li
 			margin-bottom: 10px
+		a
+			width: 100%
 	&-filters
 		padding: 30px 10px
 		&__title

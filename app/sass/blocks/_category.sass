@@ -48,6 +48,7 @@
 		display: flex
 		align-items: center
 		justify-content: flex-end
+		flex-wrap: wrap
 		margin-bottom: 35px
 		&-filter
 			width: 220px
@@ -58,9 +59,14 @@
 			align-items: center
 			padding: 0 20px
 			position: relative
-			z-index: 2
+			background: $white
+			@include mq($max-width: 575px)
+				width: 100%
+				margin: 1% 0
 			&:not(:last-child)
 				margin-right: 30px
+				@include mq($max-width: 575px)
+					margin-right: 0
 			&:after
 				border-color: $orange
 			.current
@@ -69,6 +75,8 @@
 				width: calc(100% - 5px)
 				overflow: hidden
 				display: block
+				@include mq($max-width: 575px)
+					font-size: 12px
 			.list
 				border: 1px solid $gray2
 				width: 100%
@@ -79,6 +87,8 @@
 					width: 100%
 					line-height: 2
 					padding: 0 10px
+					@include mq($max-width: 575px)
+						font-size: 12px
 					&:hover
 						background: $main-bg
 	.item
@@ -89,14 +99,24 @@
 		padding: 40px 50px
 		text-align: center
 		color: $dark
+		@include mq($max-width: 1000px)
+			padding: 15px
+		@include mq($max-width: 700px)
+			width: 48%
+		@include mq($max-width: 575px)
+			padding: 10px
+		@include mq($max-width: 370px)
+			padding: 10px 5px
 		.img-wrap
 			margin-bottom: 40px
+			@include mq($max-width: 1000px)
+				margin-bottom: 20px
 		&__img
 			display: block
-			height: 105px
-			width: auto
-			max-width: 170px
+			max-height: 105px
+			max-width: 90%
 			@include trs
+			margin: 0 auto
 			&:hover
 				transform: scale(.9)
 		&__title
@@ -106,10 +126,18 @@
 			min-height: 55px
 			margin-bottom: 18px
 			color: $dark
+			@include mq($max-width: 1000px)
+				margin-bottom: 10px
+				font-size: 16px
+			@include mq($max-width: 575px)
+				font-size: 12px
+				min-height: 30px
 			&:hover
 				color: $orange
 		.status
 			margin-bottom: 18px
+			@include mq($max-width: 700px)
+				margin-bottom: 10px
 			&.green
 				color: $green
 			&.red
@@ -121,24 +149,36 @@
 			justify-content: center
 			border-bottom: 1px solid  rgb(225, 225, 225)
 			border-top: 1px solid  rgb(225, 225, 225)
+			@include mq($max-width: 700px)
+				padding: 10px
 			&__num
 				font-weight: 700
 				font-size: 24px
+				@include mq($max-width: 575px)
+					font-size: 18px
+				@include mq($max-width: 400px)
+					font-size: 16px
 				&:after
 					content: '\f158'
 					font-family: fontello
 					font-size: 19px
 					margin-left: 5px
 					display: inline-block
+					@include mq($max-width: 575px)
+						font-size: 15px
 			&__old
 				font-size: 16px
 				text-decoration: line-through
+				@include mq($max-width: 575px)
+					font-size: 14px
 				&:after
 					content: '\f158'
 					font-family: fontello
 					font-size: 14px
 					display: inline-block
 					margin-left: 5px
+					@include mq($max-width: 575px)
+						font-size: 12px
 		.counter
 			margin: 18px 0
 			display: flex

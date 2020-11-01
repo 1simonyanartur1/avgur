@@ -9,6 +9,45 @@
 			fixedContentPos: true
 		});
 
+		if($(document).innerWidth() < 1200) {
+
+			var headerH = $('.header').innerHeight();
+			$('.sidebar').css('top',headerH + 15)
+
+			$('.show-catalog').on('click', function() {
+				$('.sidebar').toggleClass('show');
+				if($('.sidebar').hasClass('show')) {
+					$(this).html('Скрыть');
+				} else {
+					$(this).html('Каталог');
+				}
+			});
+			$('.sidebar-inner2').on('click', function() {
+				$('.sidebar').toggleClass('show');
+				if($('.sidebar').hasClass('show')) {
+					$('.show-catalog').html('Скрыть');
+				} else {
+					$('.show-catalog').html('Каталог');
+				}
+			});
+		}
+
+		if($(document).innerWidth() < 1200) {
+			$(document).on('click', '.burger', function () {
+				if (!$(this).hasClass('active')) {
+					$('.header .menu').slideDown();
+					$(this).addClass('active');
+				} else {
+					$('.header .menu').slideUp();
+					$(this).removeClass('active');
+				}
+			});
+			$(document).on('click', '.header .menu a', function () {
+				$('.header .menu').slideUp();
+				$('.burger').removeClass('active');
+			});
+		}
+
 
 		$('.catalog-links > li > ul').hide();
 		$(document).on('click', '.catalog-links .icon-down-open-mini', function () {
@@ -122,7 +161,23 @@
 			nextArrow: '<button class="icon-down-open-mini right"></button>',
 			slidesToShow: 5,
 			slidesToScroll: 1,
-			infinite: true
+			infinite: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				}
+			]
 		});
 
 		var $status = $('.mainslider .slider-counter');
@@ -137,17 +192,6 @@
 			var i = (currentSlide ? currentSlide : 0) + 1;
 			$status.find('.slider-counter__curr').html(i);
 		});
-		
-		
-		// var $status = $('.mainslider .slider-counter');
-		// var $slickElement = $('.mainslider .slider');
-
-		// $slickElement.on('init reInit afterChange', function (event, slick, currentSlide) {
-		// 	var i = (currentSlide ? currentSlide : 0) + 1;
-		// 	$status.find('.slider-counter__curr').html(i);
-		// 	$status.find('.slider-counter__all').html(slick.slideCount);
-		// });
-		// console.log();
 
 		$(".tabs").tabs();
 
