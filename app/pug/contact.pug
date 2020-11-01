@@ -1,0 +1,65 @@
+- var img = '../img/';
+ 
+doctype
+html
+	include blocks/head.pug
+		title
+	body.contact-page
+		include blocks/header.pug
+		
+		sidebar.sidebar
+			include blocks/catalog-links.pug
+
+		main.main
+			section.breadcrumbs
+				ul
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Контакты
+			section.contact
+				h1.page-title Контакты
+				.inner
+					.blocks
+						.block
+							.block__icon.icon-phone
+							ul.list
+								li
+									a(href="tel:+380622534755") +38 (062) 253 47 55
+								li
+									a(href="tel:+380714010829") +38 (071) 4010829 Светлана
+								li
+									a(href="tel:+380713311310") +38 (071)3311310 Офис
+						.block
+							.block__icon.icon-mail-alt
+							ul.list
+								li
+									a(href="mailto:") andreiinatenko@gmail.com
+								li
+									a(href="mailto:") 4444132@gmail.com
+						.block
+							.block__icon.icon-location
+							address.text <span>г.Донецк ул.Куйбышева 143 Г</span> <span>Склад: г.Донецк ул.Куйбышева 143 А</span>
+						.block
+							.block__icon.icon-clock
+							time.text <span>Время работы с 9:00-17:00</span> <span>Продвижение сайта <a href="https://nebo.dn.ua/" target="_blank" rel="nofollow">nebo.dn.ua</a></span>
+					.map-wrap
+						#map
+
+			section.callback
+				.page-title Форма обратной связи
+				form.form
+					.form-item
+						input.form__input(type="text" name="callback-name" placeholder="Имя")
+					.form-item
+						input.form__input(type="email" name="callback-email" placeholder="Email")
+					.form-item
+						input.form__input(type="tel" name="callback-tel" placeholder="Телефон")
+					.form-item
+						textarea.form__input(name="callback-text" placeholder="Сообщение")
+					.form-action
+						a.form__btn.btn-orange(href="#") Отправить
+
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

@@ -1,0 +1,88 @@
+- var img = '../img/';
+ 
+doctype
+html
+	include blocks/head.pug
+		title
+	body.reviews-page
+		include blocks/header.pug
+		
+		sidebar.sidebar
+			include blocks/catalog-links.pug
+
+		main.main
+			section.breadcrumbs
+				ul
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Отзывы
+
+			section.reviews
+				h1.page-title Отзывы
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+				article.item
+					.item-left
+						.item__name Светлана
+						.item__date 20.06.2020
+					.item-right
+						.item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+
+			section.callback
+				.page-title Форма обратной связи
+				form.form
+					.form-item
+						input.form__input(type="text" name="callback-name" placeholder="Имя")
+					.form-item
+						input.form__input(type="email" name="callback-email" placeholder="Email")
+					.form-item
+						input.form__input(type="tel" name="callback-tel" placeholder="Телефон")
+					.form-item
+						textarea.form__input(name="callback-text" placeholder="Сообщение")
+					.form-action
+						a.form__btn.btn-orange(href="#") Отправить
+
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

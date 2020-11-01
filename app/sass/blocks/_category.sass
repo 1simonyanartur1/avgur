@@ -1,0 +1,178 @@
+.nice-select
+	padding: 0
+	margin: 0
+	border: none
+	background: none
+	line-height: 1
+	width: auto
+	height: auto
+	min-height: 0
+	border-radius: 0
+	*
+		border-radius: 0
+		min-height: 0
+		padding: 0
+		margin: 0
+		border: none
+		background: none
+		line-height: 1
+		width: auto
+		height: auto
+	.list
+		border-radius: 0
+		min-height: 0
+		padding: 0
+		margin: 0
+		border: none
+		background: none
+		line-height: 1
+		width: auto
+		height: auto
+		li
+			border-radius: 0
+			line-height: 1
+			padding: 0
+			margin: 0
+			border: none
+			background: none
+			width: auto
+			height: auto
+			min-height: 0
+
+.category
+	.inner
+		display: flex
+		flex-wrap: wrap
+	.output
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		margin-bottom: 35px
+		&-filter
+			width: 220px
+			height: 24px
+			vertical-align: middle
+			border: 1px solid $gray2
+			display: flex
+			align-items: center
+			padding: 0 20px
+			position: relative
+			z-index: 2
+			&:not(:last-child)
+				margin-right: 30px
+			&:after
+				border-color: $orange
+			.current
+				color: $dark
+				text-overflow: ellipsis
+				width: calc(100% - 5px)
+				overflow: hidden
+				display: block
+			.list
+				border: 1px solid $gray2
+				width: 100%
+				top: 120%
+				background: $white
+				li
+					background: $white
+					width: 100%
+					line-height: 2
+					padding: 0 10px
+					&:hover
+						background: $main-bg
+	.item
+		width: 31.3%
+		margin: 1%
+		background: $white
+		box-shadow: -11.594px 12.433px 56.42px 5.58px rgba(0, 0, 0, 0.09)
+		padding: 40px 50px
+		text-align: center
+		color: $dark
+		.img-wrap
+			margin-bottom: 40px
+		&__img
+			display: block
+			height: 105px
+			width: auto
+			max-width: 170px
+			@include trs
+			&:hover
+				transform: scale(.9)
+		&__title
+			font-size: 16px
+			text-transform: uppercase
+			font-weight: 500
+			min-height: 55px
+			margin-bottom: 18px
+			color: $dark
+			&:hover
+				color: $orange
+		.status
+			margin-bottom: 18px
+			&.green
+				color: $green
+			&.red
+				color: $red
+		.price
+			padding: 18px 0
+			display: flex
+			align-items: flex-end
+			justify-content: center
+			border-bottom: 1px solid  rgb(225, 225, 225)
+			border-top: 1px solid  rgb(225, 225, 225)
+			&__num
+				font-weight: 700
+				font-size: 24px
+				&:after
+					content: '\f158'
+					font-family: fontello
+					font-size: 19px
+					margin-left: 5px
+					display: inline-block
+			&__old
+				font-size: 16px
+				text-decoration: line-through
+				&:after
+					content: '\f158'
+					font-family: fontello
+					font-size: 14px
+					display: inline-block
+					margin-left: 5px
+		.counter
+			margin: 18px 0
+			display: flex
+			align-items: center
+			justify-content: center
+			&__num
+				background: none
+				border: none
+				font-size: 14px
+				width: 100px
+				text-align: center
+				width: 40px
+				margin: 0 10px
+			&__btn
+				width: 25px
+				height: 25px
+				font-size: 16px
+				line-height: 1
+				color: $white
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 100%
+				@include trs
+				background: $orange
+				cursor: pointer
+				user-select: none
+				&:hover
+					background-image: linear-gradient( 59deg, rgb(182,24,24) 0%, rgb(203,90,8) 100%)
+		&__btn
+			display: block
+			width: 100%
+			cursor: pointer
+
+
+
+

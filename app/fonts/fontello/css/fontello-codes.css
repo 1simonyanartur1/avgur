@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+ 
+.icon-ok:before { content: '\2713'; } /* '✓' */
+.icon-eye:before { content: '\e06a'; } /* '' */
+.icon-location:before { content: '\e724'; } /* '' */
+.icon-down-open-mini:before { content: '\e760'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-rouble:before { content: '\f158'; } /* '' */
+.icon-shopping-basket:before { content: '\f291'; } /* '' */
+.icon-user:before { content: '👤'; } /* '\1f464' */
+.icon-phone:before { content: '📞'; } /* '\1f4de' */
+.icon-download:before { content: '📥'; } /* '\1f4e5' */
+.icon-search:before { content: '🔍'; } /* '\1f50d' */
+.icon-clock:before { content: '🕔'; } /* '\1f554' */

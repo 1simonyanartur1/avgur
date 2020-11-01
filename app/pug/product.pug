@@ -1,0 +1,101 @@
+- var img = '../img/';
+ 
+doctype
+html
+	include blocks/head.pug
+		title
+	body.product-page
+		include blocks/header.pug
+		
+		sidebar.sidebar
+			include blocks/catalog-links.pug
+
+		main.main
+			section.breadcrumbs
+				ul
+					li
+						a(href="index.html") Главная
+					li
+						a(href="catalog.html") Каталог
+					li
+						a(href="catalog.html") Категория товаров
+					li
+						a(href="category.html") Конкретный товар
+			section.product
+				h1.page-title Название выбранного товара
+				.top
+					.top-left
+						.codes
+							.codes-item <b>Артикул:</b> А34827БГ384
+							.codes-item <b>Штрих код товара:</b> А34827БГ384
+						.slider-for
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+						.slider-nav
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+							.slide
+								img.slide__img(src=img+"catalog/img1.jpg", alt="")
+					form.top-right(action="#")
+						.status.green В наличии
+							.status__num 111 шт
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						ul.sizes
+							li 25
+							li 30
+							li 50
+						ul.action
+							li
+								button.btn-orange Купить
+				.bottom
+					.tabs
+						ul.tabs-list
+							li
+								a(href="#tab1") Описание товара
+							li
+								a(href="#tab2") Характеристики
+						.tabs-block#tab1
+							.text-container
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse bore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacu facilisis. 
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse bore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+						.tabs-block#tab2
+							ul.product-list
+								li
+									span Название характеристики
+									b Значение
+								li
+									span Название характеристики
+									b Значение
+								li
+									span Название характеристики
+									b Значение
+								li
+									span Название характеристики
+									b Значение
+								li
+									span Название характеристики
+									b Значение
+
+
+
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

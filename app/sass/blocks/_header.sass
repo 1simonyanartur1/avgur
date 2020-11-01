@@ -1,0 +1,137 @@
+.header
+	width: 100%
+	margin-bottom: 30px
+	background: $white
+	.top
+		width: 100%
+		padding: 12px 0
+		.container
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+	.logo
+		padding: 22px 32px
+		border: 1px solid $orange
+		border-radius: 50px
+		&__img
+			display: block
+			width: 205px
+			height: auto
+			@include trs
+			&:hover
+				opacity: .5
+				transform: scale(.9)
+	.block
+		max-width: 520px
+		&__text
+			margin-bottom: 10px
+			line-height: 1.1
+		&-line
+			width: 100%
+			display: flex
+			align-items: center
+			justify-content: space-between
+	.search
+		position: relative
+		&__input
+			width: 370px
+			height: 45px
+			border-radius: 35px
+			border: 1px solid $orange
+			padding: 17px 50px 17px 35px
+			font-weight: 900
+			font-size: 16px
+			text-transform: uppercase
+			color: $dark
+			@include trs
+			&::placeholder
+				color: $dark
+				text-transform: uppercase
+				font-weight: 900
+			&:hover,
+			&:focus
+				border: 1px solid $dark
+				padding-left: 20px
+		&__btn
+			position: absolute
+			right: 0
+			top: 0
+			color: $white
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 45px
+			height: 45px
+			border-radius: 100%
+			background: $orange
+			@include trs
+			cursor: pointer
+			&:hover
+				background: $dark
+	.basket-link
+		display: flex
+		align-items: center
+		color: $dark
+		margin: 0 auto 0 30px
+		&:hover
+			.basket-link__icon
+				background: $dark
+		&__icon
+			@include trs
+			display: block
+			width: 45px
+			height: 45px
+			background: $orange
+			color: $white
+			font-size: 15px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 100%
+		&__num
+			margin-left: 10px
+			&:after
+				content: '\f158'
+				font-family: fontello
+				font-size: 13px
+				margin-left: 5px
+	.links
+		li
+			&:not(:last-child)
+				margin-bottom: 10px
+	.menu-wrap
+		width: 100%
+		background: $orange2
+	.menu
+		width: 100%
+		display: flex
+		align-items: center
+		li
+			flex: 1
+			&:last-child
+				a
+					&:before
+						display: none
+		a
+			padding: 20px 0
+			position: relative
+			width: 100%
+			text-align: center
+			text-transform: uppercase
+			color: $white
+			font-size: 16px
+			font-weight: 500
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: 1px
+				background: $white
+				height: 20px
+				right: 0
+				top: 50%
+				transform: translate(0, -50%)
+			&:after
+			&:hover
+				color: $orange2
+				background: $white

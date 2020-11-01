@@ -1,0 +1,23 @@
+.breadcrumbs
+	margin: 0 0 30px 0
+	ul
+		width: 100%
+	li
+		display: inline-block
+		vertical-align: middle
+		&:not(:last-child)
+			&:after
+				content: '>'
+				display: inline-block
+				font: 18px
+				margin: 0 5px
+		&:last-child
+			a
+				pointer-events: none
+	a
+		color: $dark
+		font-size: 18px
+		line-height: 1.2
+		font-weight: 500
+		&:hover
+			color: $orange

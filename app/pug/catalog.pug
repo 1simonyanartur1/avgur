@@ -1,0 +1,82 @@
+- var img = '../img/';
+ 
+doctype
+html
+	include blocks/head.pug
+		title
+	body.catalog-page
+		include blocks/header.pug
+		
+		sidebar.sidebar
+			include blocks/catalog-links.pug
+
+		main.main
+			section.breadcrumbs
+				ul
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#") Каталог
+			section.catalog
+				h1.page-title Каталог товаров
+				.inner
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img1.jpg", alt="")
+						.item__text БАНКОВСКОЕ ОБОРУДОВАНИЕ И АКСЕССУАРЫ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img2.jpg", alt="")
+						.item__text батарейки
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img3.jpg", alt="")
+						.item__text бланки
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img4.jpg", alt="")
+						.item__text БРОШЮРОВЩИКИ И РАСХОДНЫЕ МАТЕРИАЛЫ ДЛЯ ПЕРЕПЛЕТА
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img5.jpg", alt="")
+						.item__text БУМАЖНАЯ ПРОДУКЦИЯ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img6.jpg", alt="")
+						.item__text БЫТОВАЯ ХИМИЯ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img7.jpg", alt="")
+						.item__text КАЛЬКУЛЯТОРЫ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img8.jpg", alt="")
+						.item__text КАНЦТОВАРЫ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img9.jpg", alt="")
+						.item__text КОМПЬЮТЕРНЫЕ И МОБИЛЬНЫЕ АКСЕССУАРЫ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img10.jpg", alt="")
+						.item__text МЕБЕЛЬ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img11.jpg", alt="")
+						.item__text НОСИТЕЛИ ИНФОРМАЦИИ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img12.jpg", alt="")
+						.item__text ПАПКИ И АРХИВАЦИЯ ДОКУМЕНТОВ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img13.jpg", alt="")
+						.item__text ПИШУЩИЕ И ЧЕРТЕЖНЫЕ ПРИНАДЛЕЖНОСТИ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img14.jpg", alt="")
+						.item__text ПРАЗДНИЧНАЯ ПРОДУКЦИЯ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img15.jpg", alt="")
+						.item__text ПРЕЗЕНТАЦИОННОЕ ОБОРУДОВАНИЕ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img16.jpg", alt="")
+						.item__text РАСХОДНЫЕ МАТЕРИАЛЫ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img17.jpg", alt="")
+						.item__text УПАКОВОЧНЫЙ МАТЕРИАЛ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img18.jpg", alt="")
+						.item__text ШКОЛЬНЫЕ ТОВАРЫ
+					a.item(href="category.html")
+						img.item__img(src=img+"catalog/img19.jpg", alt="")
+						.item__text ШТЕМПЕЛЬНАЯ ПРОДУКЦИЯ
+
+		include blocks/footer.pug
+		include blocks/scripts.pug

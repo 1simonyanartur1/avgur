@@ -1,0 +1,57 @@
+form(action="#").sidebar-filters
+	.sidebar-filters__title Цена:
+	.price
+		.price-line
+			.price-block
+				label.price-block__label(for="min-price") от
+				input.price-block__input(type="number", name="min-price" id="min-price" value="0")
+			.price-block
+				label.price-block__label(for="max-price") до
+				input.price-block__input(type="number", name="max-price" id="max-price" value="500")
+		.price-slider-wrap
+			span от
+			.price-slider#slider-range
+			span до
+	.sidebar-filters__title Характеристики: 
+	.property
+		.property-block
+			.property__title Наименование характеристики
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+		.property-block
+			.property__title Наименование характеристики
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+			label.checkbox
+				input.checkbox__input(type="checkbox")
+				span.checkbox__mark Наименование элемента
+	.sidebar-filters__title Наличиче:
+	.available
+		label.checkbox
+			input.checkbox__input(type="checkbox")
+			span.checkbox__mark В наличии
+		label.checkbox
+			input.checkbox__input(type="checkbox")
+			span.checkbox__mark Нет в наличии
+	ul.sidebar-filters-btns
+		li
+			button.btn-orange(href="#") Применить
+		li
+			button.btn-orange2(href="#") Сбросить

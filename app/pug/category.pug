@@ -1,0 +1,166 @@
+- var img = '../img/';
+ 
+doctype
+html
+	include blocks/head.pug
+		title
+	body.category-page
+		include blocks/header.pug
+		
+		sidebar.sidebar
+			include blocks/sidebar-filters.pug
+			include blocks/catalog-links.pug
+
+		main.main
+			section.breadcrumbs
+				ul
+					li
+						a(href="index.html") Главная
+					li
+						a(href="catalog.html") Каталог
+					li
+						a(href="catalog.html") Категория товаров
+			section.category
+				form(action="#").output
+					select(name="filter1").output-filter
+						option(value="Название по убыванию") Название по убыванию
+						option(value="Название по возростанию") Название по возростанию
+					select(name="filter1").output-filter
+						option(value="отображать по 12") отображать по 12
+						option(value="отображать по 12") отображать по 12
+				h1.page-title Название категори
+				.inner
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green Нет в наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+					form.item(action="#" method="#")
+						a.img-wrap(href="product.html")
+							img.item__img(src=img+"catalog/img1.jpg", alt="")
+						a.item__title(href="product.html") название категории в три строки
+						.status.green В наличии
+						.price
+							.price__num 500
+							.price__old / 550
+						.counter
+							.counter__btn.minus -
+							input.counter__num(type="text" value="1")
+							.counter__btn.plus +
+						button.item__btn.btn-orange Купить
+				
+				section.pagination
+					ul
+						li
+							a.icon-down-open-mini.prev(href="#")
+						li
+							a.active(href="#") 1
+						li
+							a(href="#") 2
+						li
+							a(href="#") 3
+						li
+							a.icon-down-open-mini.next(href="#")
+
+
+		include blocks/footer.pug
+		include blocks/scripts.pug
