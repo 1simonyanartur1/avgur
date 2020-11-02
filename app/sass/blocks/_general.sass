@@ -2,7 +2,7 @@ html
 	background: $main-bg
 
 body
-	font-family: 'Futura', sans-serif
+	font-family: 'Futura'
 	font-size: 14px
 	font-weight: 400
 	max-width: 1920px
@@ -12,17 +12,46 @@ body
 	display: flex
 	flex-wrap: wrap
 	position: relative
-	&.index-page,
+	&.index-page
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right, url($img+'bg3-3.jpg') no-repeat bottom 200px left, url($img+'bg4-4-4-4.jpg') no-repeat bottom 200px right
+		@include mq($max-width: 1500px)
+			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right, url($img+'bg3-3.jpg') no-repeat bottom left, url($img+'bg4-4-4-4.jpg') no-repeat bottom right
+		@include mq($max-width: 1200px)
+			background: none
+	&.catalog-page
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right, url($img+'bg3-3.jpg') no-repeat bottom 300px left, url($img+'bg4-4-4-4.jpg') no-repeat bottom 200px right
+		@include mq($max-width: 1500px)
+			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right, url($img+'bg3-3.jpg') no-repeat bottom left, url($img+'bg4-4-4-4.jpg') no-repeat bottom right
+		@include mq($max-width: 1200px)
+			background: none
 	&.reviews-page
-		background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right, url($img+'bg3.jpg') no-repeat bottom left, url($img+'bg4.jpg') no-repeat bottom right
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right, url($img+'bg3.jpg') no-repeat bottom 300px left, url($img+'bg4.jpg') no-repeat bottom 300px right
 		@include mq($max-width: 1700px)
+			background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right
+		@include mq($max-width: 1200px)
+			background: none
+	&.category-page
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right, url($img+'bg3-3.jpg') no-repeat bottom 300px left, url($img+'bg4-4-4.jpg') no-repeat bottom 300px right
+		@include mq($max-width: 1500px)
+			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right, url($img+'bg3-3.jpg') no-repeat bottom left, url($img+'bg4-4-4.jpg') no-repeat bottom right
+		@include mq($max-width: 1200px)
+			background: none
+	&.contact-page
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right
+		@include mq($max-width: 1500px)
 			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right
 		@include mq($max-width: 1200px)
 			background: none
-	&.product-page,
+	&.product-page
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right
+		@include mq($max-width: 1500px)
+			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right
+		@include mq($max-width: 1200px)
+			background: none
 	&.content-page,
-	&.contact-page
-		background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right
+		background: url($img+'bg1.jpg') no-repeat top 180px left, url($img+'bg2.jpg') no-repeat top 180px right, url($img+'bg3-3-3.jpg') no-repeat bottom 200px left, url($img+'bg4-4-4.jpg') no-repeat bottom 250px right
+		@include mq($max-width: 1500px)
+			background: url($img+'bg1.jpg') no-repeat top left, url($img+'bg2.jpg') no-repeat top right, url($img+'bg3-3-3.jpg') no-repeat bottom left, url($img+'bg4-4-4.jpg') no-repeat bottom right
 		@include mq($max-width: 1200px)
 			background: none
 	@include mq($max-width: 1200px)
@@ -230,21 +259,20 @@ body,
 		&.active,
 		&:hover
 			color: $white
-			background: $orange
+			background: $orange3
 		&.prev,
 		&.next
 			display: flex
 			align-items: center
 			justify-content: center
-			background: $orange
 			text-align: center
+			background: none
 			&:hover
-				color: $white
-				background: $dark
-				transform: scale(1.1)
+				&:before
+					color: $orange3
 			&:before
-				font-size: 20px
-				color: $white
+				font-size: 25px
+				color: $gray2
 				@include mq($max-width: 575px)
 					font-size: 16px
 		&.prev

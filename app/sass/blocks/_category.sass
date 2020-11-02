@@ -96,7 +96,7 @@
 		margin: 1%
 		background: $white
 		box-shadow: -11.594px 12.433px 56.42px 5.58px rgba(0, 0, 0, 0.09)
-		padding: 40px 50px
+		padding: 30px
 		text-align: center
 		color: $dark
 		@include mq($max-width: 1000px)
@@ -107,8 +107,43 @@
 			padding: 10px
 		@include mq($max-width: 370px)
 			padding: 10px 5px
+		&.green
+			.status
+				color: $green
+		&.red
+			.status
+				color: $red
+		&.add
+			.basket-link
+				display: flex
+		&__btn-remove
+			color: $red
+			display: block
+			width: 100%
+			text-align: center
+			margin-top: 10px
+			background: none
+			font-weight: 500
+			font-size: 12px
+			cursor: pointer
+			@include mq($max-width: 575px)
+				font-size: 10px
+			&:hover
+				color: $dark
+		.codes
+			text-align: right
+			padding: 0
+			font-size: 12px
+			width: 100%
+			margin-bottom: 15px
+			@include mq($max-width: 370px)
+				display: none
+			&-item
+				width: 100%
+				@include mq($max-width: 575px)
+					font-size: 10px
 		.img-wrap
-			margin-bottom: 40px
+			margin-bottom: 20px
 			@include mq($max-width: 1000px)
 				margin-bottom: 20px
 		&__img
@@ -122,9 +157,9 @@
 		&__title
 			font-size: 16px
 			text-transform: uppercase
-			font-weight: 500
+			font-weight: 600
 			min-height: 55px
-			margin-bottom: 18px
+			margin-bottom: 10px
 			color: $dark
 			@include mq($max-width: 1000px)
 				margin-bottom: 10px
@@ -138,11 +173,8 @@
 			margin-bottom: 18px
 			@include mq($max-width: 700px)
 				margin-bottom: 10px
-			&.green
-				color: $green
-			&.red
-				color: $red
 		.price
+			width: 100%
 			padding: 18px 0
 			display: flex
 			align-items: flex-end
@@ -179,6 +211,48 @@
 					margin-left: 5px
 					@include mq($max-width: 575px)
 						font-size: 12px
+		.counter-wrap
+			display: flex
+			align-items: center
+			justify-content: center
+		.basket-link
+			margin-left: 10px
+			width: 35px
+			height: 35px
+			border-radius: 100%
+			background: $orange3
+			color: $white
+			display: flex
+			align-items: center
+			justify-content: center
+			position: relative
+			display: none
+			@include mq($max-width: 575px)
+				width: 25px
+				height: 25px
+				font-size: 10px
+			&:hover
+				background: $dark
+			.num
+				background: $white
+				border-radius: 5px
+				padding: 2px 0
+				background: $white
+				position: absolute
+				border: 1px solid $gray2
+				z-index: 3
+				right: -30px
+				top: -5px
+				font-size: 12px
+				font-weight: 700
+				color: $dark
+				width: 40px
+				text-align: center
+				@include mq($max-width: 575px)
+					font-size: 8px
+					width: 35px
+					right: -10px
+					top: -10px
 		.counter
 			margin: 18px 0
 			display: flex
@@ -192,6 +266,9 @@
 				text-align: center
 				width: 40px
 				margin: 0 10px
+				@include mq($max-width: 575px)
+					width: 30px
+					margin: 0 5px
 			&__btn
 				width: 25px
 				height: 25px
@@ -203,7 +280,7 @@
 				justify-content: center
 				border-radius: 100%
 				@include trs
-				background: $orange
+				background: $orange3
 				cursor: pointer
 				user-select: none
 				&:hover

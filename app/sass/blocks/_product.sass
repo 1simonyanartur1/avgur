@@ -12,6 +12,7 @@
 				margin-bottom: 15px
 		&-right
 			width: 40%
+			padding-left: 30px
 			@include mq($max-width: 700px)
 				width: 100%
 	.bottom
@@ -82,13 +83,17 @@
 			height: 80px
 			margin: 0 10px
 			&.slick-current
-				.slide__img
-					opacity: .5
+				border-color: $orange
 			&__img
 				@include trs
 				display: block
 				max-width: 80%
 				max-height: 80%
+		.slick-arrow
+			&.left
+				left: -15px
+			&.right
+				right: -15px
 
 	.status
 		margin-bottom: 18px

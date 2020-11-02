@@ -8,17 +8,15 @@
 		display: flex
 		align-items: flex-end
 		justify-content: center
-		padding-top: 25px
+		margin: 0 15px
 		&__all
 			font-size: 14px
 		&__curr
 			font-size: 18px
 			font-weight: 700
 	.slick-arrow
-		position: absolute
 		width: 30px
 		height: 30px
-		bottom: -50px
 		border-radius: 100%
 		display: flex
 		align-items: center
@@ -33,17 +31,15 @@
 		&:hover
 			background: $dark
 		&.left
-			left: 40%
 			transform: translate(0, 0)
-			@include mq($max-width: 575px)
-				left: 20%
 			&:before
 				transform: rotate(90deg)
 		&.right
-			right: 40%
 			transform: translate(0, 0)
-			@include mq($max-width: 575px)
-				right: 20%
 			&:before
 				transform: rotate(-90deg)
-
+	.bottom
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-top: 30px
