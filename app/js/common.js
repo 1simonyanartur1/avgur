@@ -48,6 +48,9 @@
 			});
 		}
 
+		$('.category .item.add').each(function() {
+			$(this).find('.item__btn').html('В корзине');
+		});
 
 		$('.catalog-links > li > ul').hide();
 		$(document).on('click', '.catalog-links .icon-down-open-mini', function () {

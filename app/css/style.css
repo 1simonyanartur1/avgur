@@ -1474,6 +1474,8 @@ body::-webkit-scrollbar-thumb,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+  .category .item.add .item__btn {
+    background: #52ac62; }
   .category .item__btn-remove {
     color: #cb1c1c;
     display: block;
