@@ -1728,7 +1728,7 @@ body::-webkit-scrollbar-thumb,
 
 .product .codes {
   text-align: center;
-  padding: 10px;
+  padding: 0 10px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2523,7 +2523,7 @@ body::-webkit-scrollbar-thumb,
     width: 100%; }
 
 .sidebar .price {
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.5);
   margin-bottom: 30px; }
   .sidebar .price-line {
     display: -webkit-box;
@@ -2567,7 +2567,7 @@ body::-webkit-scrollbar-thumb,
     width: 100%; }
 
 .sidebar .property {
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.5);
   margin-bottom: 30px; }
   .sidebar .property-block {
     margin-bottom: 30px; }
